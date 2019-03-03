@@ -1,0 +1,126 @@
+/* 首页 styel */
+.logo{
+    /* height: 100px; */
+    padding: 10px 0px;
+}
+.logo img{
+    width: 80px;
+}
+.swiper-slide img{
+    width: 100%;
+}
+
+.pro-info{
+    font-size: 0;
+}
+.pro-info li{
+    display: inline-block;
+    font-size: 16px;
+    width: 25%;
+    margin: 50px 0;
+}
+.pro-info li h3{
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.pro-info li p{
+    padding: 0 30px;
+    color: rgb(149, 149, 149);
+    font-weight: 300!important;
+}
+
+/* 案例中心 */
+.pro-centre{
+    background: #212121;
+    padding: 50px 0;
+}
+.pro-centre .container{
+    text-align: left;
+    padding-top: 45px;
+}
+.pro-centre .container li{
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2%;
+}
+.pro-centre .container li:not(:last-child){
+    margin-right: 2%;
+}
+.pro-centre .container li:nth-child(3){
+    margin-right:0;
+}
+.pro-centre img{
+    width: 100%;
+}
+.pro-centre ul{
+    font-size: 0;
+}
+.pro-centre a:hover{
+    color: #fff;
+}
+.pro-centre h2{
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.text-box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: rgb(40, 40, 40);
+    padding: 50px 20px 0px;
+    cursor: pointer;
+    transition: ease .65s;
+}
+.text-box h2{
+    line-height: 24px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 0px;
+    padding: 0px;
+    transition: all 0.65s ease 0s;
+    overflow: hidden;
+}
+.text-box h4{
+    margin-top: 11px;
+    margin-bottom: 11px;
+    font-size: 14px;
+}
+.text-box p{
+    color: rgb(255, 255, 255);
+    /* width: 100%; */
+    font-size: 14px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;      /* 可以显示的行数，超出部分用...表示*/
+    -webkit-box-orient: vertical;
+    line-height: 26px;
+}
+
+/* 出现动画 */
+.img{
+    /* opacity: 0; */
+    transform: scale(1);
+    transition: ease .65s;
+}
+.pro-centre li:hover .img {
+    /* opacity: 1; */
+    transform: scale(1.1);
+}
+.pro-centre li:hover .text-box{
+    background: transparent;
+    top: -15px;
+}
+/* 新闻资讯 */

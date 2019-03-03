@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+body, ul, ol, dl, li, dd, h1, h2, h3, h4, h5, h6, p, input { margin: 0 }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; font-family: "Microsoft YaHei"; }
+img { border-style: none;vertical-align: middle; }
+input, button, textarea, select {
+*font-size: 100%; border: none; }
+body { background: #fff; color: #5e5e5e; font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif; }
+ul, ol { list-style: none; padding: 0 }
+table { border-collapse: collapse; border-spacing: 0 }/*默认a标签样式*/
+a:link, a:visited { color: #5e5e5e; text-decoration: none; }
+a:hover { color: #c9394a; /*text-decoration: underline;*/ }
+a:active { color: #666; }/*浮动和清除浮动*/
+.fl { float: left }
+.fr { float: right }
+.clear { zoom: 1 }
+.clear:after { content: ""; display: block; height: 0; visibility: visible; clear: both } /*显示隐藏*/
+.hide { display: none }
+.show { display: block }/*表格table和td有边框*/
+.boder_tl { border-top: 1px solid #ccc; border-left: 1px solid #ccc; }
+.boder_tl td { border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; }
+.boder_bl { border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; }
+.boder_bl td { border-top: 1px solid #ccc; border-right: 1px solid #ccc; }
+.boder_tr { border-top: 1px solid #ccc; border-right: 1px solid #ccc; }
+.boder_tr td { border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; }
+.boder_br { border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; }
+.boder_br td { border-top: 1px solid #ccc; border-left: 1px solid #ccc; }
+.txt_center { text-align: center; }/*表格table和tr有边框*/
+.boder_ltr_trborder { border: 1px solid #ccc; border-bottom: none; }
+.boder_ltr_trborder tr { border-bottom: 1px solid #ccc; }
+
+
+
+
+
+/* 公共头部导航样式 */
+header,footer{
+    text-align: center;
+    /* position: absolute; */
+    /* top: 0; */
+    width: 100%;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+nav li {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+nav li.active,nav li:hover{
+    color: #a27a51;
+}
+
+/* 公共底部 */
+footer{
+    border-color: #212121;
+    /* top: auto; */
+    /* bottom: 0; */
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 20px 0px;
+}
+footer nav li{
+    height: 17px;
+    line-height: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+}
+footer nav li:not(:last-child){
+    border-right: 1px solid rgb(228, 234, 236);
+}
+/* banner 样式 */
+.swiper-slide{
+    line-height: 300px;
+    text-align: center;
+    font-size: 50px;
+    background: #f2f2f2
+}
+
+
+/* 媒体查询 */
+/* @media (min-width: 992px){
+.container {
+    width: 970px;
+}
+}
+@media (min-width: 768px){
+.container {
+    width: 750px;
+}}
+@media (min-width: 480px){
+.container {
+    width: 606px;
+} */
+
+.outerContainer{
+    padding: 70px 0px;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1150px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+} 
+.wid50{
+    width: 50%;
+}
+
+/* 更多按钮 */
+.more-box{
+    text-align: center;
+}
+.about_more{
+    display: inline-block;
+    font-size: 14px;
+    background-color: rgb(162, 122, 81);
+    padding: 10px 30px;
+    border-radius: 2em;
+    border-width: 1px;
+    color: #fff !important;
+    border-style: solid;
+    border-image: initial;
+    border-color: rgb(162, 122, 81);
+    transition: all 0.25s ease-out 0s;
+}
+.about_more:hover{
+    background: #000;
+}
