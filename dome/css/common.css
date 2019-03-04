@@ -134,3 +134,6 @@ footer nav li:not(:last-child){
 .about_more:hover{
     background: #000;
 }
+.text-l{
+    text-align: left;
+}

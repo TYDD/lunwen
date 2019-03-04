@@ -124,3 +124,22 @@
     top: -15px;
 }
 /* 新闻资讯 */
+.title h3{
+    color: rgb(26, 26, 26);
+    display: inline-block;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 25px;
+}
+.txt-namemark{
+    color: rgb(149, 149, 149);
+    padding-bottom: 14px;
+    font-size: 14px;
+}
+.box_title{
+    color: rgb(26, 26, 26);
+    padding: 20px 30px 30px 0px;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 22px;
+}
