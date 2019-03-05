@@ -119,6 +119,15 @@ footer nav li:not(:last-child){
 .wid30{
     width: 30%;
 }
+.logo{
+    padding: 10px 0px;
+}
+.logo img{
+    width: 80px;
+}
+.swiper-slide img{
+    width: 100%;
+}
 
 /* 更多按钮 */
 .more-box{
@@ -142,4 +151,30 @@ footer nav li:not(:last-child){
 }
 .text-l{
     text-align: left;
+}
+/* 立即预约 */
+.rightNow{
+    background: url(https://mb.mituo.cn/mui508/upload/mui508/201901/1548053058.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0;
+}
+.rightNow h2{
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.rightNow p{
+    font-size: 16px;
+    width: 80%;
+    color: #eeeeee;
+    margin: 0px auto 10px auto;
+}
+.rightNow button{
+    background: #ffffff;
+    color: #333333;
+    border-radius: 3px;
+    width: 100px;
+    padding: 6px 15px;
+    font-size: 14px;
 }
