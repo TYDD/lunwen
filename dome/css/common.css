@@ -28,7 +28,7 @@ a:active { color: #666; }/*浮动和清除浮动*/
 .txt_center { text-align: center; }/*表格table和tr有边框*/
 .boder_ltr_trborder { border: 1px solid #ccc; border-bottom: none; }
 .boder_ltr_trborder tr { border-bottom: 1px solid #ccc; }
-
+input::-webkit-input-placeholder ,textarea::-webkit-input-placeholder {color:#fff;}
 
 
 
@@ -112,6 +112,12 @@ footer nav li:not(:last-child){
 } 
 .wid50{
     width: 50%;
+}
+.wid70{
+    width: 70%;
+}
+.wid30{
+    width: 30%;
 }
 
 /* 更多按钮 */

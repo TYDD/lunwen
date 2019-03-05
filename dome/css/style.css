@@ -124,6 +124,15 @@
     top: -15px;
 }
 /* 新闻资讯 */
+.news-ul{
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.news-ul li{
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    padding:15px 0;
+}
 .title h3{
     color: rgb(26, 26, 26);
     display: inline-block;
@@ -142,4 +151,106 @@
     font-size: 14px;
     text-align: justify;
     line-height: 22px;
+}
+.box-img{
+    max-width: 25%;
+    float: left;
+    text-align: left;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.box-img img{
+ width: 100%;
+}
+.box-content {
+    width: 75%;
+    float: left;
+    padding-top: 10px;
+}
+.box-content h3 a{
+    font-size: 14px;
+    color: rgb(26, 26, 26);
+}
+.box-content p{
+    color: rgb(149, 149, 149);
+    font-size: 14px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;      /* 可以显示的行数，超出部分用...表示*/
+    -webkit-box-orient: vertical;
+}
+.box-content .text-Time{
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+/* 在线预约 */
+.appointment{
+    background: #212121;
+    padding: 72px 0;
+}
+.appointment h2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 60px;
+
+}
+.inputBox{
+    box-sizing: border-box;
+    padding-right:20px;
+    margin: 10px 0;
+}
+.inputBox input{
+    width: 100%;
+    height: 20px;
+    padding: 5px 0;
+    color: #ffffff;
+    background: #a27a51;
+    text-indent: 1em;
+    outline: none;
+}
+.textareaBox{
+    padding-right: 20px;
+}
+.textareaBox textarea{
+    width: 100%;
+    height: 80px;
+    background: #a27a51;
+    resize: none;
+    text-indent: 1em;
+    padding: 0;
+    font: 13.3333px Arial;
+    padding: 5px 0;
+    outline: none;
+    margin: 10px 0;
+}
+.btn button{
+    font-size: 14px;
+    background: #a27a51;
+    color: #ffffff;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+.appointment .wid30,.wid30 a{
+    text-align: right;
+    color: #fff;
+    font-size: 44px;
+}
+.appointment .wid30 span{
+    display: block;
+    font-size: 12px;
+}
+.foot-tel p{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    line-height: 32px;
+}
+.foot-tel a{
+    font-weight: bold;
 }
