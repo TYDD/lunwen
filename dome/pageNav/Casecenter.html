@@ -7,6 +7,7 @@
     <title>案例中心</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/plugin/layui.css">
 </head>
 <body>
     <!-- 公共 头部导航 -->
@@ -34,8 +35,13 @@
             </div>
         </div>
     </header>
-
-
+    <!-- 内容区 -->
+    <div class="outcontent casecenter">
+        <div class="container">
+                <div id="laypage1"></div>
+        </div>
+    </div>
+    <!-- 公共底部 -->
     <footer>
         <nav>
             <ul>
@@ -49,5 +55,62 @@
             <p>我的网站 版权所有 2008-2019 湘ICP备8888888 本站内容、图片、视频为网站模板演示数据，如有涉及侵犯版权，请联系我们提供书面反馈，我们核实后会立即删除。</p>
         </nav>
     </footer>
+
+    <script src="../js/plugin/layui.js"></script>
+    <script>
+        //测试数据
+    var data = [
+        '北京',
+        '上海',
+        '广州',
+        '深圳',
+        '杭州',
+        '长沙',
+        '合肥',
+        '宁夏',
+        '成都',
+        '西安',
+        '南昌',
+        '上饶',
+        '沈阳',
+        '济南',
+        '厦门',
+        '福州',
+        '九江',
+        '宜春',
+        '赣州',
+        '宁波',
+        '绍兴',
+        '无锡',
+        '苏州',
+        '徐州',
+        '东莞',
+        '佛山',
+        '中山',
+        '成都',
+        '武汉',
+        '青岛',
+        '天津',
+        '重庆',
+        '南京',
+        '九江',
+        '香港',
+        '澳门',
+        '台北'
+    ];
+function layPageInit(){
+    layui.use('laypage', function(){
+        var laypage = layui.laypage;
+        //执行一个laypage实例
+        laypage.render({
+          elem: 'laypage1' //注意，这里的 test1 是 ID，不用加 # 号
+          ,count: data.length //数据总数，从服务端得到
+          ,limit:3 //每页显示的条数
+          ,groups:2 //连续出现的页码个数
+        });
+      });
+}
+layPageInit();
+    </script>
 </body>
 </html>

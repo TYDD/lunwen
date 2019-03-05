@@ -7,7 +7,6 @@ $(function(){
 
 
 // 初始化 banner
-
 function bannerInit(){
     var mySwiper = new Swiper('.swiper-container', {
         autoplay: true,//可选选项，自动滑动
@@ -20,3 +19,5 @@ function bannerInit(){
         },
     })
 }
+
+// 初始化案例中心分页
