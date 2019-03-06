@@ -1,0 +1,139 @@
+.title{
+    color: rgb(162, 122, 81);
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.title::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -25px;
+    background: rgb(162, 122, 81);
+}
+#newDataBox{
+    padding: 50px 30px 30px 30px;
+}
+#newDataBox li{
+    border: 5px solid #e8e8e8;
+    margin-bottom: 50px;
+    width: 95%;
+    position: relative;
+
+}
+#newDataBox li:nth-of-type(odd){
+    float: left;
+}
+#newDataBox li:nth-of-type(even){
+    float: right;
+}
+.img img{
+    width: 100%;
+}
+.img{
+    width: 50%;
+    float: right;
+    transform: translate(58px, -24px);
+    max-height: 350px;
+    text-align: center;
+    transition: 0.65s ease;
+}
+.text{
+    float: left;
+    width: 50%;
+}
+.text_title{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    position: relative;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    margin: 50px 0px 35px;
+}
+.text_title::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -20px;
+    background: rgb(204, 204, 204);
+    transition: 0.65s ease;
+}
+
+#newDataBox i::before,#newDataBox i::after{
+    visibility: hidden;
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-color: rgb(162, 122, 81);
+    transition: 0.65s ease;
+}
+#newDataBox i::before{
+    left: -5px;
+    top: -5px;
+    border-top: 5px solid rgb(162, 122, 81);
+    border-left: 5px solid rgb(162, 122, 81);
+}
+#newDataBox i::after{
+    right: -5px;
+    bottom: -5px;
+    border-right: 5px solid rgb(162, 122, 81);
+    border-bottom: 5px solid rgb(162, 122, 81);
+}
+#newDataBox li:hover > i::after,#newDataBox li:hover > i::before{
+    width: 100.5%;
+    height: 100%;
+    visibility: visible;
+}
+#newDataBox li:hover .text_title::after{
+    background: rgb(162, 122, 81);
+}
+#newDataBox li:hover .img {
+    transform: translate(0px);
+}
+
+
+.lh-more {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(162, 122, 81);
+    box-shadow: rgba(12, 3, 6, 0.13) 0px 0px 10px;
+    position: relative;
+    z-index: 1;
+    background: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+.lh-more::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    transition: 0.35s ease-out;
+    background: rgb(162, 122, 81);
+}
+.lh-more:hover{
+    color: #fff;
+}
+.lh-more:hover:after{
+    width: 100%;
+}

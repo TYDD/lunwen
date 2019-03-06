@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>案例中心</title>
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/plugin/layui.css">
+    <!-- <link rel="stylesheet" href="../css/about.css"> -->
+    <link rel="stylesheet" href="../js/plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/casecenter.css">
 </head>
 <body>
     <!-- 公共 头部导航 -->
@@ -38,6 +39,50 @@
     <!-- 内容区 -->
     <div class="outcontent casecenter">
         <div class="container">
+                <div id="laypagecontent">
+                    <div class="title">案例中心</div>
+                    <ul id="newDataBox" class="clear">
+                        <li>
+                            <i></i>
+                            <div class="text">
+                                <h2 class="text_title"></h2>
+                                <p>这次带来个全屋红橡的案例，设计上干净整洁，整体搭配起来和谐自然。组合电视柜、大型餐边柜、带顶箱的大衣柜大大提升空间利用率。</p>
+                                <a href="#" class="lh-more">more</a>
+                            </div>                   
+                            <div class="img"><img src="https://images.mituo.cn/mui508/upload/mui508/201901/1548040276.jpg" alt=""></div>
+                        </li>
+                        <li>
+                            <i></i>
+                            <div class="text">
+                                <h2 class="text_title"></h2>
+                                <p>这次带来个全屋红橡的案例，设计上干净整洁，整体搭配起来和谐自然。组合电视柜、大型餐边柜、带顶箱的大衣柜大大提升空间利用率。</p>
+
+                            </div>                   
+                            <div class="img"><img src="https://images.mituo.cn/mui508/upload/mui508/201901/1548040276.jpg" alt=""></div>
+                            <a href="#" class="lh-more">more</a>
+                        </li>
+                        <li>
+                            <i></i>
+                            <div class="text">
+                                <h2 class="text_title"></h2>
+                                <p>这次带来个全屋红橡的案例，设计上干净整洁，整体搭配起来和谐自然。组合电视柜、大型餐边柜、带顶箱的大衣柜大大提升空间利用率。</p>
+
+                            </div>                   
+                            <div class="img"><img src="https://images.mituo.cn/mui508/upload/mui508/201901/1548040276.jpg" alt=""></div>
+                            <a href="#" class="lh-more">more</a>
+                        </li>
+                        <li>
+                            <i></i>
+                            <div class="text">
+                                <h2 class="text_title"></h2>
+                                <p>这次带来个全屋红橡的案例，设计上干净整洁，整体搭配起来和谐自然。组合电视柜、大型餐边柜、带顶箱的大衣柜大大提升空间利用率。</p>
+
+                            </div>                   
+                            <div class="img"><img src="https://images.mituo.cn/mui508/upload/mui508/201901/1548040276.jpg" alt=""></div>
+                            <a href="#" class="lh-more">more</a>
+                        </li>
+                    </ul>
+                </div>
                 <div id="laypage1"></div>
         </div>
     </div>
@@ -56,7 +101,7 @@
         </nav>
     </footer>
 
-    <script src="../js/plugin/layui.js"></script>
+    <script src="../js/plugin/layui/layui.js"></script>
     <script>
         //测试数据
     var data = [
@@ -66,37 +111,8 @@
         '深圳',
         '杭州',
         '长沙',
-        '合肥',
-        '宁夏',
-        '成都',
-        '西安',
-        '南昌',
-        '上饶',
-        '沈阳',
-        '济南',
-        '厦门',
-        '福州',
-        '九江',
-        '宜春',
-        '赣州',
-        '宁波',
-        '绍兴',
-        '无锡',
-        '苏州',
-        '徐州',
-        '东莞',
-        '佛山',
-        '中山',
-        '成都',
-        '武汉',
-        '青岛',
-        '天津',
-        '重庆',
-        '南京',
-        '九江',
-        '香港',
-        '澳门',
-        '台北'
+        '杭州',
+        '长沙',
     ];
 function layPageInit(){
     layui.use('laypage', function(){
@@ -105,8 +121,27 @@ function layPageInit(){
         laypage.render({
           elem: 'laypage1' //注意，这里的 test1 是 ID，不用加 # 号
           ,count: data.length //数据总数，从服务端得到
-          ,limit:3 //每页显示的条数
+          ,limit:4 //每页显示的条数
           ,groups:2 //连续出现的页码个数
+          ,jump: function(obj, first){
+               //模拟渲染
+                (function(){
+                var arr = []
+                ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                layui.each(thisData, function(index, item){
+                // arr.push('<li>'+ item +'</li>');
+                   document.getElementsByClassName('text_title')[index].innerText = item;
+                  
+                });
+                // console.log(arr.join(''))
+                return arr.join('');
+                })();
+                //首次不执行
+                if(!first){
+                //do something
+                    
+                }
+            }
         });
       });
 }
