@@ -18,12 +18,12 @@
         </div>
         <nav>
             <ul>
-                <li>网站首页</li>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>新闻资讯</li>
-                <li>在线预约</li>
-                <li>联系我们</li>
+                <li class="active">网站首页</li>
+                <a href="./pageNav/about.html"><li>关于我们</li></a>
+                <a href="./pageNav/Casecenter.html"></a><li>产品中心</li></a>
+                <a href="./pageNav/newscenter.html"></a><li>新闻资讯</li></a>
+                <a href="./pageNav/Onlinebooking.html"></a><li>在线预约</li></a>
+                <a href="./pageNav/contantUs.html"></a><li>联系我们</li></a>
             </ul>
         </nav>
 
@@ -295,6 +295,20 @@
 
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-    <script src="./js/common.js"></script>
+    <script>
+        function bannerInit(){
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: true,//可选选项，自动滑动
+                loop : true,//无缝循环
+                preventClicks : false,//默认true 点击滑动时禁止跳转
+                pagination: {
+                    el: '.swiper-pagination',
+                    bulletElement : 'li',
+                    clickable :true,
+                },
+            })
+        }
+        bannerInit();
+    </script>
 </body>
 </html>

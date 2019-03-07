@@ -1,8 +1,11 @@
 $(function(){
     // 初始化
-    bannerInit()
-    console.log(window.innerHeight);//浏览器高度
-    console.log($('.swiper-slide').height());//浏览器高度
+    // bannerInit()
+    // headerNavLink()
+    // window.location.href='index.html'
+    console.log(window.location.href);
+    console.log(window.location.hostname);
+    console.log(window.location.pathname);
 })
 
 
@@ -20,4 +23,31 @@ function bannerInit(){
     })
 }
 
-// 初始化案例中心分页
+// 导航连接
+ function headerNavLink(){
+     $('header nav li').on('click',function(event){
+          let e = window.event || event;//兼容所有浏览器
+          let navTexy  = e.target ;
+          console.log( window.location.pathname, window.location.href);
+            switch (navTexy.innerText) {
+                case '网站首页':
+                $(location).attr('href', 'index.html');
+                    break;
+                case '关于我们':
+                $(location).attr('href', './pageNav/about.html');
+                    break;
+                case '产品中心':
+              
+                    break;
+                case '新闻资讯':
+               
+                    break;
+                case '在线预约':
+               
+                    break;
+                case '联系我们':
+               
+                    break;
+            }
+     })
+ }
