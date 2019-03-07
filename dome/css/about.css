@@ -21,3 +21,21 @@
     width: 100%;
     margin: 30px 0;
 }
+/* 联系我们 */
+table{
+    width: 100%;
+    empty-cells: show;
+}
+table td{
+    border-color: rgb(228, 234, 236);
+    padding: 0.5em 0.7em;
+    line-height: 1.5em;
+    vertical-align: middle;
+    max-width: 100%;
+    word-break: break-all;
+    border: 1px solid #e4eaec;
+    font-size: 12px;
+}
+table td p{
+    margin-bottom: 0.8em;
+}
